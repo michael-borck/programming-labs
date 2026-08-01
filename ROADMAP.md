@@ -29,7 +29,7 @@ toys §The toys).
 
 - [x] Lab 4 — The Checklist It Can't Charm
 - [x] Lab 5 — The Flight Recorder
-- [ ] Lab 6 — Teach the Intern
+- [x] Lab 6 — Teach the Intern
 - [ ] Toy: `context-porthole` (pairs Labs 6–7)
 - [ ] Provided repo for Lab 7 — a small product whose agent's claims and reality disagree
       (authored by vibe-coding from a flaw-spec, and saying so)

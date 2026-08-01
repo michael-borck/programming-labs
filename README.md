@@ -31,7 +31,7 @@ specific misconception and installs one durable habit.
 | 3 | [Say What You Mean](lab-03-say-what-you-mean/) | "the AI knows what I meant" | writing the spec first | ✅ |
 | 4 | [The Checklist It Can't Charm](lab-04-checklist-it-cant-charm/) | "checking is re-reading" | acceptance checks that run | ✅ |
 | 5 | [The Flight Recorder](lab-05-flight-recorder/) | "one wrong move ruins it" | small commits, fearless branches | ✅ |
-| 6 | Teach the Intern | "every chat starts from zero" | the context folder | 💡 |
+| 6 | [Teach the Intern](lab-06-teach-the-intern/) | "every chat starts from zero" | the context folder | ✅ |
 | 7 | Trust, Then Verify | "it sounds right so it is right" | demanding evidence of done | 💡 |
 | 8 | The Taste Test | "best is objective" | critique as a deliverable | 💡 |
 | 9 | The Last 20% | "the hard part is the first 80%" | directing polish | 💡 |
