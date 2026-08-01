@@ -3,6 +3,19 @@
 The series practises what it teaches: this file records what we chose, what we rejected, and why.
 Format per entry: **what we decided · what we rejected · why**. Newest first.
 
+## 2026-08-01 — Grades anchor in a secured lane; the portfolio is a gate, not the grade
+
+TEACHING.md's assessment design: the twelve-repo portfolio (AI unbounded) is a completion gate,
+and the grade lives in live, identity-attached instruments — a five-minute open-book viva
+against the student's own repo, a timed invigilated spec sprint *with* AI access, and a live
+steer on a provided repo. **Rejected:** grading reflections or the portfolio itself as primary
+evidence, and AI-detection tooling. **Why:** spec/delta/critique proves the artifacts can't be
+autonomous, not that this student authored them — a frontier model with context can stage all
+of it, including the reflection. The series' own Lab 7 lesson applies to markers: fluency is
+never evidence; don't grade what you can't interrogate. AI-allowed timed assessment is valid
+here precisely because directing AI is the examined skill — an open-book exam where the book is
+the discipline.
+
 ## 2026-08-01 — One facilitation page, not twelve guides
 
 `TEACHING.md` is a single page: cohort logistics, one session shape, the restraint rules, and a
