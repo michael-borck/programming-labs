@@ -20,10 +20,10 @@ toys §The toys).
 
 ## Phase A — complete Act I (wonder & disillusionment)
 
-- [ ] Lab 1 — Hello, Department of One
-- [ ] Toy: `next-word` (pairs Lab 1)
-- [ ] Lab 2 — The Demo Illusion
-- [ ] Toy: `demo-illusion` (pairs Lab 2)
+- [x] Lab 1 — Hello, Department of One
+- [ ] Toy: `next-word` (pairs Lab 1 — when live, add a warm-up link to Lab 1's README)
+- [x] Lab 2 — The Demo Illusion
+- [ ] Toy: `demo-illusion` (pairs Lab 2 — when live, add a warm-up link to Lab 2's README)
 
 ## Phase B — steering (Act II)
 

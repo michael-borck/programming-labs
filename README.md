@@ -26,8 +26,8 @@ specific misconception and installs one durable habit.
 
 | # | Lab | Kills the belief that… | Builds the habit of… | Status |
 |---|---|---|---|:--:|
-| 1 | Hello, Department of One | "programming isn't for me" | everything lives in a repo | 💡 |
-| 2 | The Demo Illusion | "it works = it's done" | defining done before admiring it | 💡 |
+| 1 | [Hello, Department of One](lab-01-department-of-one/) | "programming isn't for me" | everything lives in a repo | ✅ |
+| 2 | [The Demo Illusion](lab-02-demo-illusion/) | "it works = it's done" | defining done before admiring it | ✅ |
 | 3 | [Say What You Mean](lab-03-say-what-you-mean/) | "the AI knows what I meant" | writing the spec first | ✅ |
 | 4 | The Checklist It Can't Charm | "checking is re-reading" | acceptance checks that run | 💡 |
 | 5 | The Flight Recorder | "one wrong move ruins it" | small commits, fearless branches | 💡 |

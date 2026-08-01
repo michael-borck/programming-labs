@@ -3,6 +3,14 @@
 The series practises what it teaches: this file records what we chose, what we rejected, and why.
 Format per entry: **what we decided · what we rejected · why**. Newest first.
 
+## 2026-08-01 — Setup lives inside Lab 1; there is no Lab 0
+
+Account creation, agent install, and model access are the opening section of Lab 1.
+**Rejected:** a separate Lab 0 / setup guide. **Why:** zero-prerequisite learners abandon at setup
+friction; the first win (a live URL on their phone) must land in the same sitting as the setup
+pain, or there is no second sitting. The lab also says out loud that setup is the worst half hour
+of the series — honesty is cheaper than polish here.
+
 ## 2026-08-01 — Lab 3 built first, out of order
 
 Built Lab 3 (*Say What You Mean*) before Labs 1–2. **Rejected:** building in sequence.
