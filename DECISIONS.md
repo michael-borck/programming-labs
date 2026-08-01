@@ -3,6 +3,16 @@
 The series practises what it teaches: this file records what we chose, what we rejected, and why.
 Format per entry: **what we decided · what we rejected · why**. Newest first.
 
+## 2026-08-01 — One facilitation page, not twelve guides
+
+`TEACHING.md` is a single page: cohort logistics, one session shape, the restraint rules, and a
+one-line watch-for per lab. **Rejected:** per-lab facilitation guides. **Why:** the briefs
+already self-facilitate — a per-lab guide would either duplicate them or, worse, accumulate the
+instructor's answers, and the staff knowledge that genuinely exists nowhere else (when *not* to
+help, what never to demo, where each lab's designed failure must be allowed to happen) fits on
+one page. If a watch-for ever outgrows its line, that's a signal to fix the lab, not to grow
+the guide.
+
 ## 2026-08-01 — Labs stay GitHub-rendered markdown; the landing page is the only HTML
 
 The briefs are read on GitHub, not on a rendered site. **Rejected:** publishing the labs as

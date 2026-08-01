@@ -95,7 +95,8 @@ the series in a unit? Add a row.
 |---|---|
 | *(none yet)* | |
 
-For instructors: the marking model is the evidence trio. Grade the spec by re-running it (the
+For instructors: [`TEACHING.md`](TEACHING.md) is the one-page facilitation guide (session
+shape, restraint rules, per-lab watch-fors). The marking model is the evidence trio. Grade the spec by re-running it (the
 Replication Test *is* the marking instrument), the delta by reading `DECISIONS.md` against the
 commits, the critique on whether its opinions are arguable. AI use is assumed and unbounded; the
 graded artifacts are precisely the ones that can't be autonomous. Lab 11 is the rubric made
