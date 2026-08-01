@@ -3,6 +3,16 @@
 The series practises what it teaches: this file records what we chose, what we rejected, and why.
 Format per entry: **what we decided · what we rejected · why**. Newest first.
 
+## 2026-08-01 — Lab 4 guarantees its moment with a sabotage drill
+
+Lab 4's "wait, what?" (a red ✗ catching a bug the learner's eyes missed) is produced by a drill:
+the learner tells the agent to secretly break the arithmetic, then runs the checks.
+**Rejected:** relying on the tip feature to introduce a regression naturally. **Why:** a natural
+regression isn't guaranteed, and the lab's moment must be. The drill is honest (it's mutation
+testing with its real name given), both outcomes teach — a catch proves the checklist works, an
+escape exposes a missing check — and it hands learners a repeatable practice instead of a
+one-off anecdote.
+
 ## 2026-08-01 — Setup lives inside Lab 1; there is no Lab 0
 
 Account creation, agent install, and model access are the opening section of Lab 1.

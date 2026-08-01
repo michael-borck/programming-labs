@@ -27,7 +27,7 @@ toys §The toys).
 
 ## Phase B — steering (Act II)
 
-- [ ] Lab 4 — The Checklist It Can't Charm
+- [x] Lab 4 — The Checklist It Can't Charm
 - [ ] Lab 5 — The Flight Recorder
 - [ ] Lab 6 — Teach the Intern
 - [ ] Toy: `context-porthole` (pairs Labs 6–7)

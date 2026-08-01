@@ -29,7 +29,7 @@ specific misconception and installs one durable habit.
 | 1 | [Hello, Department of One](lab-01-department-of-one/) | "programming isn't for me" | everything lives in a repo | ✅ |
 | 2 | [The Demo Illusion](lab-02-demo-illusion/) | "it works = it's done" | defining done before admiring it | ✅ |
 | 3 | [Say What You Mean](lab-03-say-what-you-mean/) | "the AI knows what I meant" | writing the spec first | ✅ |
-| 4 | The Checklist It Can't Charm | "checking is re-reading" | acceptance checks that run | 💡 |
+| 4 | [The Checklist It Can't Charm](lab-04-checklist-it-cant-charm/) | "checking is re-reading" | acceptance checks that run | ✅ |
 | 5 | The Flight Recorder | "one wrong move ruins it" | small commits, fearless branches | 💡 |
 | 6 | Teach the Intern | "every chat starts from zero" | the context folder | 💡 |
 | 7 | Trust, Then Verify | "it sounds right so it is right" | demanding evidence of done | 💡 |
