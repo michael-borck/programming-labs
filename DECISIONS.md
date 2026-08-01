@@ -3,6 +3,16 @@
 The series practises what it teaches: this file records what we chose, what we rejected, and why.
 Format per entry: **what we decided · what we rejected · why**. Newest first.
 
+## 2026-08-01 — TipTop's paper trail lies in three distinct ways
+
+Lab 7's provided repo carries three claim types: false with a sham check (the lost-cent "fix",
+backed by a hard-coded green tick), false with no check at all (the polite-input claim), and
+true-and-verifiable (default tip, single file, tip maths). **Rejected:** making every claim
+false. **Why:** if everything lies, blanket paranoia scores perfectly and the learner practises
+cynicism instead of verification. The lab's skill is sorting — TRUE / FALSE / UNVERIFIED — and
+that needs honest claims in the mix. The flaw spec ships in the lab folder as
+`FLAW-SPEC-SPOILERS.md` (dogfood rule: provided repos are built from specs, and say so).
+
 ## 2026-08-01 — Lab 4 guarantees its moment with a sabotage drill
 
 Lab 4's "wait, what?" (a red ✗ catching a bug the learner's eyes missed) is produced by a drill:

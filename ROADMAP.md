@@ -32,10 +32,9 @@ toys §The toys).
 - [x] Lab 6 — Teach the Intern
 - [x] Toy: `context-porthole` (pairs Labs 6–7 — warm-up link added to Lab 6; add one to Lab 7's
       README when that lab is written)
-- [ ] Provided repo for Lab 7 — a small product whose agent's claims and reality disagree
-      (authored by vibe-coding from a flaw-spec, and saying so)
-- [ ] Lab 7 — Trust, Then Verify
-- [ ] Toy: `confidence-dial` (pairs Lab 7)
+- [x] Provided repo for Lab 7 — `handoff-tiptop/`, built from `FLAW-SPEC-SPOILERS.md`
+- [x] Lab 7 — Trust, Then Verify (links both toys as warm-ups)
+- [x] Toy: `confidence-dial` (pairs Lab 7)
 
 ## Phase C — judgement (Act III)
 

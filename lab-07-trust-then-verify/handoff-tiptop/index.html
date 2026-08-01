@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TipTop — tip &amp; split, sorted</title>
+<style>
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    background:#f6f4ef; color:#2b2b33; min-height:100vh; display:grid; place-items:center;
+    padding:2em 1em;
+  }
+  .card{
+    background:#ffffff; border-radius:18px; padding:2em 2.2em; width:100%; max-width:24em;
+    box-shadow:0 10px 40px rgba(43,43,51,.12);
+  }
+  h1{font-size:1.5em; letter-spacing:.2px;}
+  h1 span{color:#e0745c;}
+  .sub{color:#8a8a94; font-size:.85em; margin-bottom:1.4em;}
+  label{display:block; font-size:.8em; color:#8a8a94; margin:.9em 0 .25em; text-transform:uppercase;
+    letter-spacing:.6px;}
+  input{
+    font:inherit; width:100%; border:1.5px solid #e4e1d8; border-radius:10px; padding:.55em .8em;
+    font-size:1.05em;
+  }
+  input:focus{outline:none; border-color:#e0745c;}
+  button{
+    font:inherit; font-weight:700; width:100%; margin-top:1.3em; padding:.75em; border:none;
+    border-radius:10px; background:#e0745c; color:#fff; cursor:pointer; font-size:1.05em;
+  }
+  button:hover{background:#d05e45;}
+  .out{margin-top:1.4em; border-top:1.5px dashed #e4e1d8; padding-top:1.1em; display:none;}
+  .out.show{display:block;}
+  .row{display:flex; justify-content:space-between; font-size:.95em; padding:.2em 0; color:#5c5c66;}
+  .row.big{font-size:1.25em; font-weight:800; color:#2b2b33; padding-top:.4em;}
+  .foot{margin-top:1.6em; text-align:center; color:#b9b9c0; font-size:.75em;}
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Tip<span>Top</span></h1>
+    <p class="sub">Tip &amp; split, sorted.</p>
+    <label for="total">Bill total</label>
+    <input id="total" inputmode="decimal" placeholder="100.00">
+    <label for="tip">Tip %</label>
+    <input id="tip" inputmode="numeric" value="10">
+    <label for="people">People</label>
+    <input id="people" inputmode="numeric" placeholder="3">
+    <button id="go" type="button">Work it out</button>
+    <div class="out" id="out">
+      <div class="row"><span>Tip</span><span id="tipamt"></span></div>
+      <div class="row"><span>Grand total</span><span id="grand"></span></div>
+      <div class="row big"><span>Each pays</span><span id="each"></span></div>
+    </div>
+    <p class="foot">TipTop v1.3 · all checks passing</p>
+  </div>
+<script>
+"use strict";
+document.getElementById("go").addEventListener("click", function () {
+  var total = parseFloat(document.getElementById("total").value);
+  var tip = parseFloat(document.getElementById("tip").value);
+  var people = parseInt(document.getElementById("people").value, 10);
+  var tipAmt = total * tip / 100;
+  var grand = total + tipAmt;
+  var each = (grand / people).toFixed(2);
+  document.getElementById("tipamt").textContent = "$" + tipAmt.toFixed(2);
+  document.getElementById("grand").textContent = "$" + grand.toFixed(2);
+  document.getElementById("each").textContent = "$" + each;
+  document.getElementById("out").className = "out show";
+});
+</script>
+</body>
+</html>
