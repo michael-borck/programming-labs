@@ -16,6 +16,10 @@ You will not write a line of code. You will still have programmed. Sit with that
 [framing essay](../SPEAK-SOFTWARE.md) is about exactly this feeling, and it's worth the ten
 minutes if you haven't read it.
 
+**Warm up (2 minutes):** play
+[`next-word`](https://michael-borck.github.io/programming-toys/next-word/) — the thing you're
+about to hire, with its skull open. It picks the next word, and that's all it ever does.
+
 ## One-time setup (the worst half hour of this series)
 
 Honesty first: this is the least fun part of all twelve labs, it involves accounts and a terminal,
