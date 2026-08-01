@@ -1,5 +1,10 @@
 # Series Design — Programming in the Natural-Language Era
 
+> **Status note:** this is the original point-in-time design document, kept as the series' seed.
+> Everything below has since been built; the open questions at the bottom are all resolved
+> (see [`DECISIONS.md`](DECISIONS.md)) and live status lives in [`ROADMAP.md`](ROADMAP.md) and
+> the [README](README.md). Read this for the *why*; read those for the *what is*.
+
 > Working title candidates (house style: imperative pair, like *Partner, Don't Police*):
 >
 > 1. **Speak Software** — natural language is the interface; you are still the author. *(recommended)*
