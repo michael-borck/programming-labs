@@ -59,8 +59,12 @@ toys §The toys).
 
 - [ ] `package.sh` offline bundle for `programming-toys` (the security-toys artefact for LMS /
       offline labs)
-- [ ] GitHub Pages for `programming-labs` (optional — markdown renders fine on GitHub; enable only
-      if a book-style site is wanted)
+- [x] GitHub Pages for `programming-labs` — a single-file landing page (`index.html`, same
+      tokens as the toys so the two sites read as one family); lab content stays on GitHub as
+      markdown, the landing is the front door
+- [ ] Companion book — *Speak Software*, through the existing book-publisher pipeline: the
+      framing essay + twelve lab briefs + margin notes are most of a manuscript already; decide
+      after the labs have met real learners
 - [ ] Course-mapping rows in both READMEs once a unit adopts the series
 - [ ] Cross-link from books.borck.education / the books once the series has enough labs to point at
 - [ ] Revisit the model-costs section in `SPEAK-SOFTWARE.md` before first student use (prices move)

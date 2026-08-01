@@ -4,6 +4,8 @@
 > agent builds, and the durable human skills — specification, verification, decomposition, taste —
 > are the curriculum. Zero prior programming assumed. Zero apologies for that.
 
+**▶ [michael-borck.github.io/programming-labs](https://michael-borck.github.io/programming-labs/)** — the series front door.
+
 **Start here:** read [`SPEAK-SOFTWARE.md`](SPEAK-SOFTWARE.md) (10 minutes — the thesis, the
 evidence model, and the kata that structure every lab), then open Lab 1.
 
@@ -60,6 +62,19 @@ an empty folder.
 4. **The kata:** build it (round 1) → spec it (round 2) → critique it (round 3). Done when round 2
    converges and round 3 has opinions.
 
+## Getting the labs, practically
+
+**The labs are documents, not software.** Each is a brief you read (here on GitHub) and carry
+out in your own repo with your own agent — there is no lab runner, environment, or Docker to
+install. One-time setup lives inside Lab 1: a GitHub account, a CLI agent, model access. Four
+labs ship a small provided folder (`handoff-tiptop`, `brewcrew-a/b`, `bookable`, `stallboard`)
+— each a single dependency-free HTML file plus its paper trail; grab them by cloning this repo
+or `Code → Download ZIP`.
+
+**Do the labs in order — the arc is designed — or jump in.** Labs **3, 7, 8, 9, and 11** are
+standalone (3 needs only an agent and an empty folder; 7, 8, 9, 11 bring their own product).
+Labs 2, 4–6, 10, and 12 build on products you made earlier, and say so at the top.
+
 ## The toys
 
 Each lab pairs with a single-file interactive toy that breaks its misconception in about 90
@@ -82,6 +97,15 @@ Replication Test *is* the marking instrument), the delta by reading `DECISIONS.m
 commits, the critique on whether its opinions are arguable. AI use is assumed and unbounded; the
 graded artifacts are precisely the ones that can't be autonomous. Lab 11 is the rubric made
 student-facing.
+
+## Going deeper — the reference shelf
+
+The labs deliberately live above any programming language. When you want the layer underneath,
+the author's book series at [books.borck.education](https://books.borck.education) is the
+optional depth reference: *Conversation, Not Delegation* for the thinking-with-AI framework
+behind this series; *Think Python, Direct AI* for the computational-thinking spine with a real
+language under your fingers; *Ship Python, Orchestrate AI* when Labs 4, 5 and 10 make you
+curious what checks, version control and delivery look like at professional depth.
 
 ## This repo eats its own dogfood
 

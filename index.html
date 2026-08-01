@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speak Software — twelve labs for programming in the natural-language era</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#111a2e; --panel2:#0e1626; --line:#22304d;
+    --ink:#e6edf7; --muted:#93a4c3;
+    --accent:#fbbf24; --good:#34d399; --bad:#f87171;
+    --user:#2dd4bf; --agent:#a78bfa;
+    --fs:16px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:radial-gradient(1200px 800px at 30% -10%, #16223c 0%, var(--bg) 55%);
+    color:var(--ink); font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:var(--fs); line-height:1.55; min-height:100vh; padding:3em 1em 3em;
+  }
+  main{max-width:62em; margin:0 auto; display:flex; flex-direction:column; gap:1.6em;}
+  a{color:var(--user);}
+  header{text-align:center;}
+  .kicker{font-size:.75em; letter-spacing:3px; text-transform:uppercase; color:var(--user);}
+  h1{font-size:2.3em; letter-spacing:.5px; margin:.15em 0 .3em;}
+  .tagline{color:var(--muted); max-width:38em; margin:0 auto;}
+  .cta{display:flex; gap:.8em; justify-content:center; flex-wrap:wrap; margin-top:1.3em;}
+  .btn{
+    display:inline-block; text-decoration:none; font-weight:700; border-radius:10px;
+    padding:.6em 1.3em; border:1px solid #3b82f6; color:var(--ink);
+    background:linear-gradient(180deg,#1a2a4a,#12203d);
+  }
+  .btn.ghost{border-color:var(--line); background:none; color:var(--muted); font-weight:400;}
+  .btn.ghost:hover{color:var(--ink);}
+
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:16px 18px;}
+  h2{font-size:.78em; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin-bottom:.7em;}
+  .frame p{color:var(--muted);}
+  .frame b{color:var(--ink);}
+
+  .three{display:grid; grid-template-columns:repeat(3,1fr); gap:1em;}
+  @media (max-width:820px){ .three{grid-template-columns:1fr;} }
+  .three .card p{color:var(--muted); font-size:.92em;}
+  .three .card .name{font-weight:700; color:var(--ink); margin-bottom:.3em;}
+  .three .card .name span{color:var(--user);}
+
+  .act{margin-bottom:.4em;}
+  .act-title{font-size:.85em; color:var(--agent); letter-spacing:1px; text-transform:uppercase;
+    margin:.9em 0 .5em;}
+  .labs{display:grid; grid-template-columns:repeat(2,1fr); gap:.8em;}
+  @media (max-width:820px){ .labs{grid-template-columns:1fr;} }
+  .lab{
+    display:flex; flex-direction:column; gap:.35em; text-decoration:none; color:var(--ink);
+    background:var(--panel2); border:1px solid var(--line); border-radius:12px; padding:.8em 1em;
+  }
+  .lab:hover{border-color:var(--user);}
+  .lab .top{display:flex; align-items:baseline; gap:.6em;}
+  .lab .n{color:var(--agent); font-weight:800;}
+  .lab .t{font-weight:700;}
+  .lab .kills{color:var(--muted); font-size:.88em;}
+  .lab .chips{display:flex; gap:.45em; flex-wrap:wrap; margin-top:.15em;}
+  .chip{font-size:.7em; text-transform:uppercase; letter-spacing:.8px; border:1px solid;
+    border-radius:99px; padding:.1em .6em; white-space:nowrap;}
+  .chip.solo{color:var(--good); border-color:color-mix(in srgb, var(--good) 55%, transparent);}
+  .chip.chain{color:var(--muted); border-color:var(--line);}
+  .chip.repo{color:var(--accent); border-color:color-mix(in srgb, var(--accent) 55%, transparent);}
+  .chip.toy{color:var(--user); border-color:color-mix(in srgb, var(--user) 55%, transparent);}
+
+  .how .card p, .how li{color:var(--muted); font-size:.95em;}
+  .how b{color:var(--ink);}
+  .how ol{margin:.4em 0 .4em 1.3em;}
+  .how code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.9em;
+    color:var(--user); background:var(--panel2); border:1px solid var(--line); border-radius:6px;
+    padding:.05em .4em;}
+
+  .toys{display:grid; grid-template-columns:repeat(3,1fr); gap:.8em;}
+  @media (max-width:820px){ .toys{grid-template-columns:1fr;} }
+  .toy{display:flex; flex-direction:column; gap:.25em; text-decoration:none; color:var(--ink);
+    background:var(--panel2); border:1px solid var(--line); border-radius:12px; padding:.7em .9em;}
+  .toy:hover{border-color:var(--user);}
+  .toy .t{font-weight:700;}
+  .toy .k{color:var(--muted); font-size:.85em;}
+
+  .books p{color:var(--muted); font-size:.95em;}
+  .books b{color:var(--ink);}
+
+  footer{text-align:center; color:var(--muted); font-size:.85em; margin-top:1em;}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="kicker">Speak Software</p>
+    <h1>Programming, at the newest<br>abstraction level: yours.</h1>
+    <p class="tagline">Twelve hands-on labs where you describe, an agent builds, and the durable
+    human skills — specification, verification, decomposition, taste — are the curriculum.
+    Zero prior programming assumed. Zero apologies for that.</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/michael-borck/programming-labs/tree/main/lab-01-department-of-one">Start Lab 1 →</a>
+      <a class="btn ghost" href="https://github.com/michael-borck/programming-labs/blob/main/SPEAK-SOFTWARE.md">Read the 10-minute essay</a>
+      <a class="btn ghost" href="https://michael-borck.github.io/programming-toys/">Play the toys</a>
+    </div>
+  </header>
+
+  <section class="card frame">
+    <h2>The frame</h2>
+    <p>You've been handed an engineering department of one — <b>a brilliant, tireless,
+    overconfident intern</b>. It types faster than any human alive, never gets bored, and will
+    confidently hand you the wrong thing with a straight face. These labs teach you to run it:
+    every lab is a client brief, every lab kills one specific misconception, and every lab
+    leaves evidence in a GitHub repo you own. After twelve, your GitHub profile <b>is</b> the
+    portfolio.</p>
+  </section>
+
+  <section class="three">
+    <div class="card">
+      <p class="name"><span>Spec → Delta → Critique</span></p>
+      <p>The evidence of learning is never a chat transcript. It's what you asked for (the
+      spec), what you overrode and why (the decision log + commits), and what you'd still
+      change (the critique) — the three artifacts that can't be autonomous.</p>
+    </div>
+    <div class="card">
+      <p class="name"><span>The Replication Test</span></p>
+      <p>Hand your spec — alone — to a fresh agent in an empty folder. If it reproduces a
+      product you'd accept, you authored a program in English, and a stranger just executed
+      it. If not, the gap is a precise map of what you failed to say.</p>
+    </div>
+    <div class="card">
+      <p class="name"><span>The kata</span></p>
+      <p>Build it (messily, conversationally). Spec it (fresh folder, Replication Test until
+      it converges). Critique it (would you charge money?). Done when round two converges and
+      round three has opinions you'd defend out loud.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>The twelve labs</h2>
+
+    <div class="act"><p class="act-title">Act I — wonder &amp; disillusionment</p>
+      <div class="labs">
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-01-department-of-one">
+          <span class="top"><span class="n">01</span><span class="t">Hello, Department of One</span></span>
+          <span class="kills">Kills: “programming isn't for me” — one conversation to a live URL on your phone.</span>
+          <span class="chips"><span class="chip solo">start here</span><span class="chip toy">toy: next-word</span></span>
+        </a>
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-02-demo-illusion">
+          <span class="top"><span class="n">02</span><span class="t">The Demo Illusion</span></span>
+          <span class="kills">Kills: “it works = it's done” — hand it to a human, collect three failures.</span>
+          <span class="chips"><span class="chip chain">continues 01</span><span class="chip toy">toy: demo-illusion</span></span>
+        </a>
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-03-say-what-you-mean">
+          <span class="top"><span class="n">03</span><span class="t">Say What You Mean</span></span>
+          <span class="kills">Kills: “the AI knows what I meant” — three agents, one brief, three products.</span>
+          <span class="chips"><span class="chip solo">standalone taster</span><span class="chip toy">toy: three-interpretations</span></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="act"><p class="act-title">Act II — steering</p>
+      <div class="labs">
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-04-checklist-it-cant-charm">
+          <span class="top"><span class="n">04</span><span class="t">The Checklist It Can't Charm</span></span>
+          <span class="kills">Kills: “checking is re-reading” — plain-language checks, automated, then sabotaged.</span>
+          <span class="chips"><span class="chip chain">continues 03</span></span>
+        </a>
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-05-flight-recorder">
+          <span class="top"><span class="n">05</span><span class="t">The Flight Recorder</span></span>
+          <span class="kills">Kills: “one wrong move ruins it” — wreck everything on a branch, recover in one command.</span>
+          <span class="chips"><span class="chip chain">continues 04</span></span>
+        </a>
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-06-teach-the-intern">
+          <span class="top"><span class="n">06</span><span class="t">Teach the Intern</span></span>
+          <span class="kills">Kills: “every chat starts from zero” — the folder is the employee handbook. Prove it.</span>
+          <span class="chips"><span class="chip chain">continues 05</span><span class="chip toy">toy: context-porthole</span></span>
+        </a>
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-07-trust-then-verify">
+          <span class="top"><span class="n">07</span><span class="t">Trust, Then Verify</span></span>
+          <span class="kills">Kills: “it sounds right so it is right” — an immaculate paper trail, and a green tick that lies.</span>
+          <span class="chips"><span class="chip solo">standalone</span><span class="chip repo">repo included</span><span class="chip toy">toy: confidence-dial</span></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="act"><p class="act-title">Act III — judgement</p>
+      <div class="labs">
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-08-taste-test">
+          <span class="top"><span class="n">08</span><span class="t">The Taste Test</span></span>
+          <span class="kills">Kills: “best is objective” — two working versions, one budget, your reasons in writing.</span>
+          <span class="chips"><span class="chip solo">standalone</span><span class="chip repo">repos included</span></span>
+        </a>
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-09-last-20">
+          <span class="top"><span class="n">09</span><span class="t">The Last 20%</span></span>
+          <span class="kills">Kills: “the hard part is the first 80%” — polish a near-good app, with receipts.</span>
+          <span class="chips"><span class="chip solo">standalone</span><span class="chip repo">repo included</span><span class="chip toy">toy: tiny-tweak</span></span>
+        </a>
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-10-run-the-department">
+          <span class="top"><span class="n">10</span><span class="t">Run the Department</span></span>
+          <span class="kills">Kills: “big things are built in one go” — a paragraph becomes issues; the board drains.</span>
+          <span class="chips"><span class="chip chain">continues 09</span></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="act"><p class="act-title">Act IV — ownership</p>
+      <div class="labs">
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-11-the-audit">
+          <span class="top"><span class="n">11</span><span class="t">The Audit</span></span>
+          <span class="kills">Kills: “the code is the only record” — inherit a stranger's repo; the trail speaks across time.</span>
+          <span class="chips"><span class="chip solo">standalone</span><span class="chip repo">repo included</span></span>
+        </a>
+        <a class="lab" href="https://github.com/michael-borck/programming-labs/tree/main/lab-12-ship-something-true">
+          <span class="top"><span class="n">12</span><span class="t">Ship Something True</span></span>
+          <span class="kills">Kills: “I need permission to ship” — your itch, the whole kit, a URL in someone's hand.</span>
+          <span class="chips"><span class="chip chain">the capstone</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="card how">
+    <h2>What the labs are, practically</h2>
+    <p><b>The labs are documents, not software.</b> Each one is a client-framed brief you read on
+    GitHub and carry out in your own repo with your own agent. Nothing to install from us — no
+    lab runner, no environment, no Docker. One-time setup lives inside Lab 1 (a GitHub account,
+    a CLI agent such as <a href="https://pi.dev">pi</a>, model access — honestly billed as the
+    worst half hour of the series). Four labs ship a small product folder to work on
+    (<code>handoff-tiptop</code>, <code>brewcrew-a/b</code>, <code>bookable</code>,
+    <code>stallboard</code>) — every one a single HTML file plus its paper trail, no
+    dependencies.</p>
+    <ol>
+      <li><b>Get the labs:</b> read them right here on GitHub, or grab everything once —
+      <code>Code&nbsp;→&nbsp;Download&nbsp;ZIP</code> (or clone). The provided folders come with it.</li>
+      <li><b>Do them in order</b> — the arc is designed — <b>or jump in</b>: the
+      <span class="chip solo" style="font-size:.75em">standalone</span> labs (3, 7, 8, 9, 11)
+      need nothing before them; the <span class="chip chain" style="font-size:.75em">continues</span>
+      labs build on a product you made earlier.</li>
+      <li><b>Everything you produce lands in your repos</b>, not ours. A lab costs roughly a
+      coffee in model credits; the essay's <i>What it costs</i> section is honest about it.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>The toys — one misconception each, ninety seconds, no install</h2>
+    <div class="toys">
+      <a class="toy" href="https://michael-borck.github.io/programming-toys/next-word/"><span class="t">Next Word</span><span class="k">“it thinks like me” — watch the dice fall, word by word</span></a>
+      <a class="toy" href="https://michael-borck.github.io/programming-toys/demo-illusion/"><span class="t">Demo Illusion</span><span class="k">“the demo is the product” — until real users arrive</span></a>
+      <a class="toy" href="https://michael-borck.github.io/programming-toys/three-interpretations/"><span class="t">Three Interpretations</span><span class="k">“the AI knows what I meant” — three valid products say otherwise</span></a>
+      <a class="toy" href="https://michael-borck.github.io/programming-toys/context-porthole/"><span class="t">Context Porthole</span><span class="k">“it sees what I see” — it never heard you</span></a>
+      <a class="toy" href="https://michael-borck.github.io/programming-toys/confidence-dial/"><span class="t">Confidence Dial</span><span class="k">“fluent = true” — grade eight claims, meet your score</span></a>
+      <a class="toy" href="https://michael-borck.github.io/programming-toys/tiny-tweak/"><span class="t">Tiny Tweak</span><span class="k">“small change, small work” — the inside decides</span></a>
+    </div>
+  </section>
+
+  <section class="card books">
+    <h2>Going deeper</h2>
+    <p>The labs deliberately live above any programming language. When you want the layer
+    underneath, the same author's book series at
+    <a href="https://books.borck.education">books.borck.education</a> is the reference shelf:
+    <b>Conversation, Not Delegation</b> for the thinking-with-AI framework behind the whole
+    series, <b>Think Python, Direct AI</b> when you want the computational-thinking spine with
+    a real language under your fingers, and <b>Ship Python, Orchestrate AI</b> when Labs 4, 5
+    and 10 make you curious what checks, version control and delivery look like at professional
+    depth.</p>
+  </section>
+
+  <footer>
+    <p>MIT licensed · course-agnostic · sibling of
+    <a href="https://michael-borck.github.io/security-toys/">security-toys</a> and the
+    Assume-Breach series · built spec-first, decisions logged —
+    <a href="https://github.com/michael-borck/programming-labs">audit us</a></p>
+  </footer>
+</main>
+</body>
+</html>
