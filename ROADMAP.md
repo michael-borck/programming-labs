@@ -23,7 +23,7 @@ toys §The toys).
 - [x] Lab 1 — Hello, Department of One
 - [x] Toy: `next-word` (pairs Lab 1 — warm-up link added to Lab 1's README)
 - [x] Lab 2 — The Demo Illusion
-- [ ] Toy: `demo-illusion` (pairs Lab 2 — when live, add a warm-up link to Lab 2's README)
+- [x] Toy: `demo-illusion` (pairs Lab 2 — warm-up link added to Lab 2's README)
 
 ## Phase B — steering (Act II)
 

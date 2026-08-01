@@ -5,6 +5,10 @@
 > **Time:** ~90 minutes · **Needs:** your Lab 1 product and its repo, plus **one human who isn't
 > you** — flatmate, colleague, family member. Borrow one now; you need them in Part 1.
 
+**Warm up (2 minutes):** play
+[`demo-illusion`](https://michael-borck.github.io/programming-toys/demo-illusion/) — this lab's
+disaster, guaranteed, in ninety seconds. Then come do it for real.
+
 ## The brief
 
 You, wearing the client hat, look at yesterday's demo and say the four words that have shipped a
