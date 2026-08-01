@@ -39,7 +39,8 @@ specific misconception and installs one durable habit.
 | 11 | The Audit | "the code is the only record" | reading someone else's trail | 💡 |
 | 12 | Ship Something True | "I need permission to ship" | the full loop, owned | 💡 |
 
-✅ ready · 🔨 building · 💡 designed (see [`DESIGN.md`](../DESIGN.md) for all twelve one-pagers)
+✅ ready · 🔨 building · 💡 designed (see [`DESIGN.md`](DESIGN.md) for all twelve one-pagers, and
+[`ROADMAP.md`](ROADMAP.md) for the build order — an unchecked box there is a promise)
 
 The arc, in four acts: **1–3** wonder & disillusionment · **4–7** steering · **8–10** judgement ·
 **11–12** ownership.
@@ -63,8 +64,9 @@ an empty folder.
 
 Each lab pairs with a single-file interactive toy that breaks its misconception in about 90
 seconds — no install, no account, no network. They live in the sibling repo
-[`programming-toys`](../programming-toys/), and the first one,
-[`three-interpretations`](../programming-toys/three-interpretations/), pairs with Lab 3.
+[`programming-toys`](https://github.com/michael-borck/programming-toys), and the first one,
+[`three-interpretations`](https://michael-borck.github.io/programming-toys/three-interpretations/),
+pairs with Lab 3.
 
 ## Course mapping
 
