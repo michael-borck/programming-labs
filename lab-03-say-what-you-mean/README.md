@@ -34,7 +34,7 @@ housemates: running balances, who-owes-whom, maybe accounts. One may have assume
 line items, tax, tip. Different screens, different features, different products —
 
 **The moment this lab exists for:** *none of them misheard you.* Every one is a defensible reading
-of your nine words. The ambiguity wasn't in the agents. It was in your head — you knew which one
+of your eight words. The ambiguity wasn't in the agents. It was in your head — you knew which one
 you meant, and you didn't say it.
 
 > If you got three near-identical products, you found something real too: agents have popular
@@ -52,7 +52,7 @@ the words that would have selected it on the first try.
    - **Who it's for, in one sentence.** Not "everyone".
    - **Done means** — bullets a stranger could check without asking you anything. Vague words
      (*nice, simple, intuitive*) are bugs.
-   - **Must NOT** — this is the section that kills the other two interpretations. If run-B built
+   - **Must NOT** — this is the section that kills the other two interpretations. If `run-b` built
      accounts and you didn't want accounts, *"no accounts, no sign-in, no saved data"* goes here.
    - **Out of scope (deliberately)** — what a reasonable person might expect that you're
      consciously skipping.

@@ -11,7 +11,7 @@ disaster, guaranteed, in ninety seconds. Then come do it for real.
 
 ## The brief
 
-You, wearing the client hat, look at yesterday's demo and say the four words that have shipped a
+You, wearing the client hat, look at yesterday's demo and say the five words that have shipped a
 thousand broken products:
 
 > *"Great demo. Ship it Friday."*

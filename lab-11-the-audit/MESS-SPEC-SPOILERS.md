@@ -1,7 +1,7 @@
 # StallBoard mess-spec — ⚠️ SPOILERS ⚠️
 
 **Learners: stop reading.** Finding these yourself *is* Lab 11. This is the authoring spec
-(dogfood rule: provided repos are built from specs, and say so). Instructors and auditors on.
+(dogfood rule: provided repos are built from specs, and say so). Instructors and auditors, carry on.
 
 ---
 

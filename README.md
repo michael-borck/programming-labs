@@ -80,11 +80,11 @@ Labs 2, 4–6, 10, and 12 build on products you made earlier, and say so at the 
 
 ## The toys
 
-Each lab pairs with a single-file interactive toy that breaks its misconception in about 90
-seconds — no install, no account, no network. They live in the sibling repo
-[`programming-toys`](https://github.com/michael-borck/programming-toys), and the first one,
-[`three-interpretations`](https://michael-borck.github.io/programming-toys/three-interpretations/),
-pairs with Lab 3.
+Six labs (1, 2, 3, 6, 7 and 9) open with a single-file interactive toy that breaks the lab's
+misconception in about 90 seconds — no install, no account, no network; the other six labs let
+their provided repos or your own products do that job. All six toys live in the sibling repo
+[`programming-toys`](https://github.com/michael-borck/programming-toys), and the full
+labs ↔ toys index is in [`RESOURCES.md`](RESOURCES.md).
 
 ## Course mapping
 
