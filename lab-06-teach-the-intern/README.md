@@ -4,6 +4,10 @@
 > **Builds the habit of:** the context folder.
 > **Time:** ~90 minutes · **Needs:** your bill-splitter repo (Labs 3–5) and its agent.
 
+**Warm up (2 minutes):** play
+[`context-porthole`](https://michael-borck.github.io/programming-toys/context-porthole/) — you
+know seven things; count what the agent actually sees.
+
 ## The brief
 
 No client this time — just a frustration you've almost certainly hit by now:
