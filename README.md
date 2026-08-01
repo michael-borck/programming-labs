@@ -12,6 +12,9 @@ evidence model, and the kata that structure every lab), then open Lab 1.
 **Who this is for:** anyone — built for business-minded learners who have never programmed and may
 never write code by hand. If you can write a clear email, you have the prerequisite.
 
+**Gear, environments, models, costs, and outside resources:** [`RESOURCES.md`](RESOURCES.md) —
+the golden path and the honest alternatives, in one place.
+
 **What you need:** a GitHub account, a CLI agent ([pi](https://pi.dev) is the series' named path;
 any equivalent works), and model credits (see *What it costs* in the framing essay).
 

@@ -3,6 +3,31 @@
 The series practises what it teaches: this file records what we chose, what we rejected, and why.
 Format per entry: **what we decided · what we rejected · why**. Newest first.
 
+## 2026-08-01 — Labs stay GitHub-rendered markdown; the landing page is the only HTML
+
+The briefs are read on GitHub, not on a rendered site. **Rejected:** publishing the labs as
+book-style HTML pages. **Why:** "the repo is the GUI" is curriculum, not branding — from Lab 5
+onward diffs, PRs, issues and history *are* lab content, and every evidence checklist lives in a
+repo, so reading the briefs where the work happens is deliberate acclimatisation to the one UI
+the series requires. A second surface would be prettier and teach less.
+
+## 2026-08-01 — Answer keys: spoiler files public, exemplar judgement private
+
+The plant-based labs (7, 9, 11) carry their keys openly as marked spoiler files — score-yourself
+is the self-paced model, and knowing the plants after the fact is harmless. **Rejected:**
+publishing worked exemplars (memos, ledgers, critiques). **Why:** most labs have no answer — the
+Replication Test is personal, and Labs 8–9 grade argued judgement — so a published exemplar
+becomes the answer learners converge on, which is the one failure mode a taste curriculum can't
+afford. A private `programming-labs-staff` exemplars repo (the security-labs-staff pattern) goes
+on the roadmap for when a cohort adopts.
+
+## 2026-08-01 — External resources live in one file, not scattered through labs
+
+RESOURCES.md holds environments, model guidance, costs, and the borrowed-toys shelf; the labs
+link nothing external except their paired toy. **Rejected:** per-lab resource sections.
+**Why:** link-rot gets one place to bite, the labs stay lean, and the interactive-only house
+rule ("the labs' reading is the labs") keeps the shelf from becoming homework.
+
 ## 2026-08-01 — StallBoard's trail is honest but incomplete; TipTop's lies
 
 Lab 11's provided repo fails differently from Lab 7's on purpose: nothing in StallBoard's trail

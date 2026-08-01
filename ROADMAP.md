@@ -65,6 +65,9 @@ toys §The toys).
 - [ ] Companion book — *Speak Software*, through the existing book-publisher pipeline: the
       framing essay + twelve lab briefs + margin notes are most of a manuscript already; decide
       after the labs have met real learners
+- [ ] `programming-labs-staff` — private exemplars repo (worked memos, ledgers, specs with
+      commentary; the security-labs-staff pattern), when a cohort adopts the series
+- [ ] Re-verify the external links in `RESOURCES.md` each teaching period (all live Aug 2026)
 - [ ] Course-mapping rows in both READMEs once a unit adopts the series
 - [ ] Cross-link from books.borck.education / the books once the series has enough labs to point at
 - [ ] Revisit the model-costs section in `SPEAK-SOFTWARE.md` before first student use (prices move)
