@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StallBoard — Rosa's Farm Stall</title>
+<style>
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:Georgia,"Times New Roman",serif; background:#f7f3ea; color:#3d3227;
+    min-height:100vh; padding:2em 1em;}
+  .board{max-width:30em; margin:0 auto;}
+  h1{font-size:1.7em; text-align:center;}
+  .sub{text-align:center; color:#8f8171; font-style:italic; margin-bottom:1.2em;}
+  .pick{background:#fff8dc; border:2px dashed #c9a227; border-radius:12px; padding:.8em 1em;
+    text-align:center; margin-bottom:1.2em;}
+  .pick .label{font-size:.75em; letter-spacing:2px; color:#c9a227; text-transform:uppercase;}
+  .pick .what{font-size:1.15em; font-weight:700;}
+  .items{list-style:none; display:flex; flex-direction:column; gap:.6em;}
+  .item{display:flex; align-items:center; gap:.8em; background:#fffdf7; border:1px solid #e5dcc8;
+    border-radius:10px; padding:.7em .9em;}
+  .item .name{flex:1; font-size:1.05em;}
+  .item .price{font-weight:700; white-space:nowrap;}
+  .item button{font:inherit; font-size:.8em; border:1px solid #b9ad99; background:none;
+    border-radius:8px; padding:.3em .7em; cursor:pointer; color:#6f6351;}
+  .item.gone{opacity:.55;}
+  .item.gone .name{text-decoration:line-through;}
+  .item.gone .tag{font-size:.75em; color:#a0522d; border:1px solid #a0522d; border-radius:99px;
+    padding:.05em .5em; text-transform:uppercase; letter-spacing:1px;}
+  .count{text-align:center; margin-top:1em; font-size:1.05em;}
+  .count b{color:#2e6b34;}
+  .foot{text-align:center; color:#b3a692; font-size:.8em; margin-top:1.6em;}
+</style>
+</head>
+<body>
+  <div class="board">
+    <h1>🍓 StallBoard</h1>
+    <p class="sub">Rosa's Farm Stall — Saturdays, Stall 14</p>
+
+    <div class="pick">
+      <div class="label">Today's Pick</div>
+      <div class="what">Strawberries — picked this morning</div>
+    </div>
+
+    <ul class="items" id="items"></ul>
+    <p class="count" id="count"></p>
+    <p class="foot">Prices include GST · card or cash</p>
+  </div>
+<script>
+"use strict";
+// TODO: Today's Pick should rotate each Saturday (see SPEC "Weekly Special").
+// Hardcoded to strawberries for launch week — client said fine for now.
+var ITEMS = [
+  { name: "Strawberries (500g)", price: 4.95, gone: false },
+  { name: "Sourdough loaf", price: 8.95, gone: false },
+  { name: "Raw honey (jar)", price: 12.95, gone: false },
+  { name: "Free-range eggs (doz)", price: 6.95, gone: false },
+  { name: "Basil (bunch)", price: 3.95, gone: false },
+];
+function render() {
+  var ul = document.getElementById("items");
+  ul.innerHTML = "";
+  ITEMS.forEach(function (it, i) {
+    var li = document.createElement("li");
+    li.className = "item" + (it.gone ? " gone" : "");
+    li.innerHTML = "<span class=\"name\"></span>" +
+      (it.gone ? "<span class=\"tag\">sold out</span>" : "") +
+      "<span class=\"price\">$" + it.price.toFixed(2) + "</span>" +
+      "<button type=\"button\">" + (it.gone ? "back in stock" : "sold out") + "</button>";
+    li.querySelector(".name").textContent = it.name;
+    li.querySelector("button").addEventListener("click", function () {
+      it.gone = !it.gone;   // never deletes — sold-out items stay visible (SPEC)
+      render();
+    });
+    ul.appendChild(li);
+  });
+  var left = ITEMS.filter(function (it) { return !it.gone; }).length;
+  document.getElementById("count").innerHTML =
+    "<b>" + left + "</b> of " + ITEMS.length + " still available";
+}
+render();
+</script>
+</body>
+</html>

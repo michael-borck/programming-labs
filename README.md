@@ -36,8 +36,8 @@ specific misconception and installs one durable habit.
 | 8 | [The Taste Test](lab-08-taste-test/) | "best is objective" | critique as a deliverable | ✅ |
 | 9 | [The Last 20%](lab-09-last-20/) | "the hard part is the first 80%" | directing polish | ✅ |
 | 10 | [Run the Department](lab-10-run-the-department/) | "big things are built in one go" | decomposition into issues | ✅ |
-| 11 | The Audit | "the code is the only record" | reading someone else's trail | 💡 |
-| 12 | Ship Something True | "I need permission to ship" | the full loop, owned | 💡 |
+| 11 | [The Audit](lab-11-the-audit/) | "the code is the only record" | reading someone else's trail | ✅ |
+| 12 | [Ship Something True](lab-12-ship-something-true/) | "I need permission to ship" | the full loop, owned | ✅ |
 
 ✅ ready · 🔨 building · 💡 designed (see [`DESIGN.md`](DESIGN.md) for all twelve one-pagers, and
 [`ROADMAP.md`](ROADMAP.md) for the build order — an unchecked box there is a promise)

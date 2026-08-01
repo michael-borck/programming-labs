@@ -48,9 +48,12 @@ toys §The toys).
 
 ## Phase D — ownership (Act IV)
 
-- [ ] Provided repo for Lab 11 — a messy-but-realistic repo *with* spec/delta/decisions trail
-- [ ] Lab 11 — The Audit
-- [ ] Lab 12 — Ship Something True
+- [x] Provided repo for Lab 11 — `stallboard/`, honest-but-incomplete trail, built from
+      `MESS-SPEC-SPOILERS.md`
+- [x] Lab 11 — The Audit
+- [x] Lab 12 — Ship Something True
+
+**All twelve labs and all six toys are shipped.** Remaining work lives below.
 
 ## Infrastructure & polish (no phase — do when it hurts)
 

@@ -3,6 +3,18 @@
 The series practises what it teaches: this file records what we chose, what we rejected, and why.
 Format per entry: **what we decided · what we rejected · why**. Newest first.
 
+## 2026-08-01 — StallBoard's trail is honest but incomplete; TipTop's lies
+
+Lab 11's provided repo fails differently from Lab 7's on purpose: nothing in StallBoard's trail
+is false — the modes are stale (spec never updated after a documented rename), undocumented (an
+emoji the house rules forbid, with no entry to settle which is right), honestly gapped (a
+disabled check annotated "ran out of contract"), and *decided* (the .95 prices that look like a
+bug until a dated entry answers the exact objection). **Rejected:** reusing Lab 7's lying-trail
+design. **Why:** claim-testing and gap-finding are different skills, and the audit lab's moment
+— a file defending a "defect" across time — requires a trail the auditor comes to trust. The
+memo must also log strengths and say "can't know from here" where the trail can't settle a
+conflict; an audit that only lists faults teaches cynicism with a clipboard.
+
 ## 2026-08-01 — Lab 8's two versions are both right, for different people
 
 BrewCrew A (the console: dense, terse, keyboard-first) and B (the invitation: warm, roomy, one
