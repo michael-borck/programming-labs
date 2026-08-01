@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BREWCREW — ORDER CONSOLE</title>
+<style>
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; background:#141414;
+    color:#d8d8d8; padding:1.2em; font-size:14px;}
+  .wrap{max-width:46em; margin:0 auto;}
+  h1{font-size:1.15em; color:#ff8c1a; letter-spacing:1px;}
+  .sub{color:#777; font-size:.85em; margin-bottom:1em;}
+  table{width:100%; border-collapse:collapse; margin-bottom:.8em;}
+  td,th{border:1px solid #333; padding:.35em .5em; text-align:left; font-size:.95em;}
+  th{color:#999; text-transform:uppercase; font-size:.75em;}
+  input,select{font:inherit; background:#1e1e1e; color:#d8d8d8; border:1px solid #444;
+    padding:.3em .4em; width:100%;}
+  .controls{display:flex; gap:.5em; margin-bottom:1em; flex-wrap:wrap;}
+  .controls > *{flex:1; min-width:8em;}
+  button{font:inherit; background:#ff8c1a; color:#141414; border:none; padding:.45em .9em;
+    cursor:pointer; font-weight:700; white-space:nowrap; flex:0;}
+  button:hover{background:#ffa64d;}
+  button.rm{background:#333; color:#bbb; padding:.15em .5em; font-weight:400;}
+  .err{color:#ff5252; font-size:.85em; min-height:1.2em; margin-bottom:.6em;}
+  .totals{border-top:2px solid #ff8c1a; padding-top:.5em; display:flex; gap:2em; font-size:.95em;}
+  .totals b{color:#ff8c1a;}
+  .copybtn{margin-top:.8em; background:#333; color:#d8d8d8;}
+  .copied{color:#7dd87d; font-size:.85em; margin-left:.6em;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>BREWCREW :: ORDER CONSOLE</h1>
+  <p class="sub">ADD ENTRIES. COPY SUMMARY. GO.</p>
+  <div class="controls">
+    <input id="name" placeholder="NAME" aria-label="Name">
+    <select id="drink" aria-label="Drink">
+      <option value="flat white">FLAT WHITE 4.50</option>
+      <option value="long black">LONG BLACK 4.00</option>
+      <option value="cappuccino">CAPPUCCINO 4.50</option>
+      <option value="chai latte">CHAI LATTE 4.00</option>
+      <option value="hot chocolate">HOT CHOC 4.00</option>
+    </select>
+    <select id="size" aria-label="Size">
+      <option value="reg">REG +0.00</option>
+      <option value="lrg">LRG +0.50</option>
+    </select>
+    <button id="add" type="button">ADD</button>
+  </div>
+  <p class="err" id="err"></p>
+  <table>
+    <thead><tr><th>#</th><th>NAME</th><th>DRINK</th><th>SZ</th><th>$</th><th></th></tr></thead>
+    <tbody id="rows"><tr><td colspan="6">NO ENTRIES</td></tr></tbody>
+  </table>
+  <div class="totals"><span>COUNT: <b id="count">0</b></span><span>TOTAL: <b id="total">$0.00</b></span></div>
+  <button class="copybtn" id="copy" type="button">COPY SUMMARY</button><span class="copied" id="copied"></span>
+</div>
+<script>
+"use strict";
+var PRICES = { "flat white": 4.5, "long black": 4.0, "cappuccino": 4.5, "chai latte": 4.0, "hot chocolate": 4.0 };
+var order = [];
+function price(o) { return PRICES[o.drink] + (o.size === "lrg" ? 0.5 : 0); }
+function render() {
+  var rows = document.getElementById("rows");
+  rows.innerHTML = "";
+  if (!order.length) { rows.innerHTML = "<tr><td colspan=\"6\">NO ENTRIES</td></tr>"; }
+  order.forEach(function (o, i) {
+    var tr = document.createElement("tr");
+    tr.innerHTML = "<td>" + (i + 1) + "</td><td></td><td></td><td>" + o.size.toUpperCase() +
+      "</td><td>" + price(o).toFixed(2) + "</td><td><button class=\"rm\" type=\"button\">X</button></td>";
+    tr.children[1].textContent = o.name;
+    tr.children[2].textContent = o.drink.toUpperCase();
+    tr.querySelector(".rm").addEventListener("click", function () { order.splice(i, 1); render(); });
+    rows.appendChild(tr);
+  });
+  document.getElementById("count").textContent = order.length;
+  document.getElementById("total").textContent =
+    "$" + order.reduce(function (s, o) { return s + price(o); }, 0).toFixed(2);
+}
+document.getElementById("add").addEventListener("click", function () {
+  var name = document.getElementById("name").value.trim();
+  if (!name) { document.getElementById("err").textContent = "ERROR: NAME REQUIRED"; return; }
+  document.getElementById("err").textContent = "";
+  order.push({ name: name, drink: document.getElementById("drink").value,
+    size: document.getElementById("size").value });
+  document.getElementById("name").value = "";
+  render();
+});
+document.getElementById("copy").addEventListener("click", function () {
+  var lines = order.map(function (o) {
+    return o.name + ": " + o.drink + " (" + o.size + ") $" + price(o).toFixed(2);
+  });
+  lines.push("TOTAL $" + order.reduce(function (s, o) { return s + price(o); }, 0).toFixed(2));
+  navigator.clipboard.writeText(lines.join("\n")).then(function () {
+    document.getElementById("copied").textContent = "COPIED";
+    setTimeout(function () { document.getElementById("copied").textContent = ""; }, 1500);
+  });
+});
+</script>
+</body>
+</html>

@@ -3,6 +3,17 @@
 The series practises what it teaches: this file records what we chose, what we rejected, and why.
 Format per entry: **what we decided · what we rejected · why**. Newest first.
 
+## 2026-08-01 — Lab 8's two versions are both right, for different people
+
+BrewCrew A (the console: dense, terse, keyboard-first) and B (the invitation: warm, roomy, one
+decision at a time) were built from one product spec plus two opposite taste briefs, and both
+pass the same five checks. **Rejected:** making one version objectively better. **Why:** if one
+version is simply better, the critique has a right answer and taste collapses back into
+correctness — the lab's verdict must force a claim about *audience* ("who are our users?"), a
+named cost, and a steal from the loser. The taste briefs ship openly in `AUTHORING.md`; there's
+nothing to spoil when the difference is the visible point. Lab 9's Bookable, by contrast, hides
+its rough-list in `ROUGH-SPEC-SPOILERS.md` because finding the roughness is that lab's skill.
+
 ## 2026-08-01 — TipTop's paper trail lies in three distinct ways
 
 Lab 7's provided repo carries three claim types: false with a sham check (the lost-cent "fix",

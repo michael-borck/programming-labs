@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BrewCrew ☕ — let's get the coffees in</title>
+<style>
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    background:#fdf7f0; color:#4a3b32; min-height:100vh; padding:2em 1em;}
+  .wrap{max-width:26em; margin:0 auto;}
+  h1{font-size:1.5em; text-align:center;}
+  .sub{text-align:center; color:#a08d7f; margin-bottom:1.5em;}
+  .card{background:#fff; border-radius:16px; padding:1.2em; margin-bottom:1em;
+    box-shadow:0 6px 24px rgba(74,59,50,.08);}
+  h2{font-size:.85em; color:#a08d7f; margin-bottom:.7em;}
+  .drinks{display:grid; grid-template-columns:1fr 1fr; gap:.6em;}
+  button.pick{
+    font:inherit; background:#fdf7f0; border:2px solid #eadfd5; border-radius:12px;
+    padding:.7em .5em; cursor:pointer; color:#4a3b32; text-align:center;
+  }
+  button.pick .p{display:block; font-size:.8em; color:#a08d7f;}
+  button.pick[aria-pressed="true"]{border-color:#c96f4a; background:#fbeee6;}
+  .sizes{display:flex; gap:.6em; margin-top:.8em;}
+  .sizes button.pick{flex:1;}
+  input{font:inherit; width:100%; border:2px solid #eadfd5; border-radius:12px; padding:.6em .8em;}
+  input:focus{outline:none; border-color:#c96f4a;}
+  button.add{
+    font:inherit; font-weight:700; width:100%; border:none; border-radius:12px; padding:.8em;
+    background:#c96f4a; color:#fff; cursor:pointer; font-size:1.05em;
+  }
+  button.add:hover{background:#b85f3c;}
+  .oops{color:#c96f4a; text-align:center; min-height:1.3em; font-size:.9em; margin:.5em 0;}
+  .runlist{list-style:none; display:flex; flex-direction:column; gap:.4em;}
+  .runlist li{display:flex; justify-content:space-between; align-items:center; background:#fdf7f0;
+    border-radius:10px; padding:.5em .8em; font-size:.95em;}
+  .runlist button{background:none; border:none; cursor:pointer; color:#a08d7f; font-size:1em;}
+  .empty{color:#a08d7f; text-align:center; font-size:.9em;}
+  .sum{text-align:center; font-size:1.05em; margin-top:.6em;}
+  .sum b{color:#c96f4a;}
+  button.copy{
+    font:inherit; width:100%; margin-top:.8em; border:2px solid #eadfd5; background:#fff;
+    border-radius:12px; padding:.6em; cursor:pointer; color:#4a3b32;
+  }
+  .copied{text-align:center; color:#5b9a68; font-size:.9em; min-height:1.2em; margin-top:.3em;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>BrewCrew ☕</h1>
+  <p class="sub">Let's get the coffees in.</p>
+
+  <div class="card">
+    <h2>1 · Pick their drink</h2>
+    <div class="drinks" id="drinks"></div>
+    <div class="sizes" id="sizes"></div>
+  </div>
+
+  <div class="card">
+    <h2>2 · Who's it for?</h2>
+    <input id="name" placeholder="Their name" aria-label="Name">
+    <p class="oops" id="oops"></p>
+    <button class="add" id="add" type="button">Add to the run ☕</button>
+  </div>
+
+  <div class="card">
+    <h2>3 · The run so far</h2>
+    <ul class="runlist" id="list"><li class="empty">Nobody yet — you're first!</li></ul>
+    <p class="sum" id="sum"></p>
+    <button class="copy" id="copy" type="button">Copy the order for the café 📋</button>
+    <p class="copied" id="copied"></p>
+  </div>
+</div>
+<script>
+"use strict";
+var DRINKS = [
+  ["flat white", 4.5], ["long black", 4.0], ["cappuccino", 4.5],
+  ["chai latte", 4.0], ["hot chocolate", 4.0],
+];
+var drink = "flat white", size = "reg", order = [];
+var drinksEl = document.getElementById("drinks");
+DRINKS.forEach(function (d) {
+  var b = document.createElement("button");
+  b.className = "pick"; b.type = "button";
+  b.setAttribute("aria-pressed", String(d[0] === drink));
+  b.innerHTML = "<span class=\"n\"></span><span class=\"p\">$" + d[1].toFixed(2) + "</span>";
+  b.querySelector(".n").textContent = d[0];
+  b.addEventListener("click", function () {
+    drink = d[0];
+    drinksEl.querySelectorAll(".pick").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+    b.setAttribute("aria-pressed", "true");
+  });
+  drinksEl.appendChild(b);
+});
+var sizesEl = document.getElementById("sizes");
+[["reg", "Regular"], ["lrg", "Large +$0.50"]].forEach(function (s) {
+  var b = document.createElement("button");
+  b.className = "pick"; b.type = "button"; b.textContent = s[1];
+  b.setAttribute("aria-pressed", String(s[0] === size));
+  b.addEventListener("click", function () {
+    size = s[0];
+    sizesEl.querySelectorAll(".pick").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+    b.setAttribute("aria-pressed", "true");
+  });
+  sizesEl.appendChild(b);
+});
+function price(o) {
+  var base = DRINKS.filter(function (d) { return d[0] === o.drink; })[0][1];
+  return base + (o.size === "lrg" ? 0.5 : 0);
+}
+function render() {
+  var list = document.getElementById("list");
+  list.innerHTML = "";
+  if (!order.length) list.innerHTML = "<li class=\"empty\">Nobody yet — you're first!</li>";
+  order.forEach(function (o, i) {
+    var li = document.createElement("li");
+    li.innerHTML = "<span class=\"who\"></span><span>$" + price(o).toFixed(2) +
+      " <button type=\"button\" aria-label=\"remove\">✕</button></span>";
+    li.querySelector(".who").textContent = o.name + " — " + o.drink +
+      (o.size === "lrg" ? " (large)" : "");
+    li.querySelector("button").addEventListener("click", function () { order.splice(i, 1); render(); });
+    list.appendChild(li);
+  });
+  var total = order.reduce(function (s, o) { return s + price(o); }, 0);
+  document.getElementById("sum").innerHTML = order.length ?
+    "That's <b>" + order.length + "</b> drink" + (order.length > 1 ? "s" : "") +
+    ", <b>$" + total.toFixed(2) + "</b> — nice one." : "";
+}
+document.getElementById("add").addEventListener("click", function () {
+  var name = document.getElementById("name").value.trim();
+  if (!name) {
+    document.getElementById("oops").textContent = "Oops — who's this one for?";
+    return;
+  }
+  document.getElementById("oops").textContent = "";
+  order.push({ name: name, drink: drink, size: size });
+  document.getElementById("name").value = "";
+  render();
+});
+document.getElementById("copy").addEventListener("click", function () {
+  var lines = order.map(function (o) {
+    return o.name + ": " + o.drink + " (" + o.size + ") $" + price(o).toFixed(2);
+  });
+  lines.push("TOTAL $" + order.reduce(function (s, o) { return s + price(o); }, 0).toFixed(2));
+  navigator.clipboard.writeText(lines.join("\n")).then(function () {
+    document.getElementById("copied").textContent = "Copied — off you go! ☕";
+    setTimeout(function () { document.getElementById("copied").textContent = ""; }, 1800);
+  });
+});
+render();
+</script>
+</body>
+</html>

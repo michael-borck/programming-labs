@@ -33,9 +33,9 @@ specific misconception and installs one durable habit.
 | 5 | [The Flight Recorder](lab-05-flight-recorder/) | "one wrong move ruins it" | small commits, fearless branches | ✅ |
 | 6 | [Teach the Intern](lab-06-teach-the-intern/) | "every chat starts from zero" | the context folder | ✅ |
 | 7 | [Trust, Then Verify](lab-07-trust-then-verify/) | "it sounds right so it is right" | demanding evidence of done | ✅ |
-| 8 | The Taste Test | "best is objective" | critique as a deliverable | 💡 |
-| 9 | The Last 20% | "the hard part is the first 80%" | directing polish | 💡 |
-| 10 | Run the Department | "big things are built in one go" | decomposition into issues | 💡 |
+| 8 | [The Taste Test](lab-08-taste-test/) | "best is objective" | critique as a deliverable | ✅ |
+| 9 | [The Last 20%](lab-09-last-20/) | "the hard part is the first 80%" | directing polish | ✅ |
+| 10 | [Run the Department](lab-10-run-the-department/) | "big things are built in one go" | decomposition into issues | ✅ |
 | 11 | The Audit | "the code is the only record" | reading someone else's trail | 💡 |
 | 12 | Ship Something True | "I need permission to ship" | the full loop, owned | 💡 |
 

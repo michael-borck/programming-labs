@@ -38,12 +38,13 @@ toys §The toys).
 
 ## Phase C — judgement (Act III)
 
-- [ ] Provided repos for Lab 8 — two working versions of the same product, different in taste
-- [ ] Lab 8 — The Taste Test
-- [ ] Provided repo for Lab 9 — a near-good app awaiting polish
-- [ ] Lab 9 — The Last 20%
-- [ ] Toy: `tiny-tweak` (pairs Lab 9)
-- [ ] Lab 10 — Run the Department
+- [x] Provided repos for Lab 8 — `brewcrew-a/` + `brewcrew-b/`, one spec, two taste briefs
+      (`AUTHORING.md`)
+- [x] Lab 8 — The Taste Test
+- [x] Provided repo for Lab 9 — `bookable/`, built from `ROUGH-SPEC-SPOILERS.md`
+- [x] Lab 9 — The Last 20%
+- [x] Toy: `tiny-tweak` (pairs Lab 9 — warm-up link in Lab 9's README)
+- [x] Lab 10 — Run the Department
 
 ## Phase D — ownership (Act IV)
 
