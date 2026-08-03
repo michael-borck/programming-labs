@@ -3,6 +3,17 @@
 The series practises what it teaches: this file records what we chose, what we rejected, and why.
 Format per entry: **what we decided · what we rejected · why**. Newest first.
 
+## 2026-08-03 — The teaching guide went private; the resources stayed public
+
+`TEACHING.md` moved to the private `programming-labs-staff` repo (with the exemplars scaffold);
+`RESOURCES.md` and the spoiler files stay here. **Rejected:** keeping the facilitation guide
+public, and conversely moving the spoilers or resources private. **Why:** the guide's audience
+was always staff, and its per-lab watch-fors name exactly the designed moments ("let the
+saboteur's escape happen") that a completionist self-paced learner shouldn't read in advance.
+The spoilers, by contrast, are load-bearing for learners — the score-yourself mechanic in Labs
+7/9/11 requires them — and RESOURCES is learner-facing gear guidance. The public README keeps
+the marking model itself: how you'll be assessed is announced policy, not a secret.
+
 ## 2026-08-01 — Grades anchor in a secured lane; the portfolio is a gate, not the grade
 
 TEACHING.md's assessment design: the twelve-repo portfolio (AI unbounded) is a completion gate,

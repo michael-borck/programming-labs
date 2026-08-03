@@ -95,8 +95,12 @@ the series in a unit? Add a row.
 |---|---|
 | *(none yet)* | |
 
-For instructors: [`TEACHING.md`](TEACHING.md) is the one-page facilitation guide (session
-shape, restraint rules, per-lab watch-fors). The marking model is the evidence trio. Grade the spec by re-running it (the
+For instructors: the facilitation guide (session shape, restraint rules, per-lab watch-fors,
+and the assessment design — viva, spec sprint, live steer) lives with the marker-calibration
+exemplars in the **private staff repo**,
+[`programming-labs-staff`](https://github.com/michael-borck/programming-labs-staff) — teaching
+or evaluating the series, [open an issue](https://github.com/michael-borck/programming-labs/issues)
+or email the author for access. The marking model itself is public: the evidence trio. Grade the spec by re-running it (the
 Replication Test *is* the marking instrument), the delta by reading `DECISIONS.md` against the
 commits, the critique on whether its opinions are arguable. AI use is assumed and unbounded; the
 graded artifacts are precisely the ones that can't be autonomous. Lab 11 is the rubric made

@@ -101,8 +101,8 @@ plants (7, 9, 11) carry their own keys in the repo as clearly-marked spoiler fil
 *after* and score yourself.
 
 For instructors: the marking model is in the [README](README.md) (re-run specs, read deltas,
-argue with critiques — AI use assumed and unbounded), the spoiler files double as marking
-notes, and a private exemplars repo (worked memos, ledgers, and specs with commentary) is on
-the [roadmap](ROADMAP.md) for when a cohort adopts the series — private because published
-exemplar *judgement* becomes the answer students converge on, which is the one failure mode a
-taste curriculum can't afford.
+argue with critiques — AI use assumed and unbounded), and the spoiler files double as marking
+notes. The facilitation guide and the marker-calibration exemplars live in the **private**
+[`programming-labs-staff`](https://github.com/michael-borck/programming-labs-staff) repo (ask
+for access via an issue or email) — private because published exemplar *judgement* becomes the
+answer students converge on, which is the one failure mode a taste curriculum can't afford.
