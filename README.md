@@ -4,7 +4,7 @@
 > agent builds, and the durable human skills — specification, verification, decomposition, taste —
 > are the curriculum. Zero prior programming assumed. Zero apologies for that.
 
-**▶ [michael-borck.github.io/programming-labs](https://michael-borck.github.io/programming-labs/)** — the series front door.
+**▶ [programminglabs.borck.education](https://programminglabs.borck.education/)** — the series front door.
 
 **Start here:** read [`SPEAK-SOFTWARE.md`](SPEAK-SOFTWARE.md) (10 minutes — the thesis, the
 evidence model, and the kata that structure every lab), then open Lab 1.
@@ -121,6 +121,13 @@ Every lab here is itself built spec-first: the series has its own [`DECISIONS.md
 and each lab folder carries the spec it was built from. The toys are vibe-coded from their own
 `SPEC.md` files and say so. You are welcome — encouraged — to audit the authors with the same
 critique form we hand you.
+
+## Related
+
+Part of [programming.borck.education](https://programming.borck.education), alongside the sibling
+toy collection [Programming Toys](https://programmingtoys.borck.education) and the
+[HandsOnAI](https://handsonai.borck.education) toolkit. The companion books on intentional AI
+collaboration live at [books.borck.education](https://books.borck.education).
 
 ## Licence
 
