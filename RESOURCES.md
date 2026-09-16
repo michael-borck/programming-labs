@@ -106,3 +106,18 @@ notes. The facilitation guide and the marker-calibration exemplars live in the *
 [`programming-labs-staff`](https://github.com/michael-borck/programming-labs-staff) repo (ask
 for access via an issue or email) — private because published exemplar *judgement* becomes the
 answer students converge on, which is the one failure mode a taste curriculum can't afford.
+
+
+## Staff tools (labs 13–15)
+
+The three staff-tool labs ship a reference implementation each, in the companion book's
+repository ([speak-software/tools](https://github.com/michael-borck/speak-software/tree/main/tools)):
+
+- `slop_check.py` — the five-gate quality check (lint, tests, coverage floor, TODO sweep,
+  diff budget) — Lab 13
+- `trio_lint.py` — lints SPEC/DECISIONS/CRITIQUE for existence, substance and dated decisions —
+  Lab 14
+- `lab_doctor.py` — environment pre-flight (Python, git, repo, agent briefing) — Lab 15
+
+They are deliberately boring, dependency-light, and short enough to read in one sitting. Treat
+them as the worked answer: commission your own first, then compare.

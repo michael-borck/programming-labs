@@ -55,16 +55,26 @@ toys §The toys).
 
 **All twelve labs and all six toys are shipped.** Remaining work lives below.
 
-## Infrastructure & polish (no phase — do when it hurts)
+## Phase E — the harness (staff tools, paired with the companion book)
+
+- [x] Companion book decision: **go** — *Speak Software* is in development through the
+      book-publisher pipeline (`books/speak-software`); the labs stay the living lab host and
+      cross-link with the book (2026-09-16)
+- [x] Lab 13 — Close the Gate (the five-gate slop check; reference implementation in the
+      book's `tools/slop_check.py`)
+- [x] Lab 14 — The Paper Trail (the evidence-trio linter; reference `tools/trio_lint.py`)
+- [x] Lab 15 — The Doctor Is In (environment pre-flight; reference `tools/lab_doctor.py`)
+
+**Infrastructure & polish (no phase — do when it hurts)**
 
 - [ ] `package.sh` offline bundle for `programming-toys` (the security-toys artefact for LMS /
       offline labs)
 - [x] GitHub Pages for `programming-labs` — a single-file landing page (`index.html`, same
       tokens as the toys so the two sites read as one family); lab content stays on GitHub as
       markdown, the landing is the front door
-- [ ] Companion book — *Speak Software*, through the existing book-publisher pipeline: the
-      framing essay + twelve lab briefs + margin notes are most of a manuscript already; decide
-      after the labs have met real learners
+- [ ] Companion book — *Speak Software*: decision made 2026-09-16 (go — see Phase E); full
+      draft written, first 12 chapters map 1:1 to the labs; fresh-reader pass and print build
+      before first student use
 - [x] `programming-labs-staff` — private staff repo created (2026-08-03); TEACHING.md moved
       there, exemplars/ scaffolded
 - [ ] Populate `programming-labs-staff/exemplars/` (worked memos, ledgers, specs with

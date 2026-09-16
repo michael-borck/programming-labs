@@ -44,6 +44,20 @@ specific misconception and installs one durable habit.
 | 11 | [The Audit](lab-11-the-audit/) | "the code is the only record" | reading someone else's trail | ✅ |
 | 12 | [Ship Something True](lab-12-ship-something-true/) | "I need permission to ship" | the full loop, owned | ✅ |
 
+## The staff tools
+
+Three follow-on labs turn the book's harness chapters into tools your department keeps. Each
+pairs with a chapter of *Speak Software* (the companion book) and ships a reference
+implementation in its [`speak-software/tools`](https://github.com/michael-borck/speak-software/tree/main/tools) folder.
+
+| # | Lab | Kills the belief that… | Builds the habit of… | Status |
+|---|---|---|---|:--:|
+| 13 | [Close the Gate](lab-13-close-the-gate/) | "I'll review it before it ships" | every repo carrying a gate that runs | ✅ |
+| 14 | [The Paper Trail](lab-14-the-paper-trail/) | "my documents are fine — I wrote them" | the evidence trio as a checked artefact | ✅ |
+| 15 | [The Doctor Is In](lab-15-the-doctor-is-in/) | "if it worked today it'll work tomorrow" | verifying the environment before the work | ✅ |
+
+Labs 13–14 extend the arc; Lab 15 is standalone and works on any folder.
+
 ✅ ready · 🔨 building · 💡 designed (see [`DESIGN.md`](DESIGN.md) for all twelve one-pagers, and
 [`ROADMAP.md`](ROADMAP.md) for the build order — an unchecked box there is a promise)
 
@@ -74,9 +88,11 @@ labs ship a small provided folder (`handoff-tiptop`, `brewcrew-a/b`, `bookable`,
 — each a single dependency-free HTML file plus its paper trail; grab them by cloning this repo
 or `Code → Download ZIP`.
 
-**Do the labs in order — the arc is designed — or jump in.** Labs **3, 7, 8, 9, and 11** are
-standalone (3 needs only an agent and an empty folder; 7, 8, 9, 11 bring their own product).
-Labs 2, 4–6, 10, and 12 build on products you made earlier, and say so at the top.
+**Do the labs in order — the arc is designed — or jump in.** Labs **3, 7, 8, 9, 11, 14 and
+15** are standalone (3 needs only an agent and an empty folder; 7, 8, 9, 11 bring their own
+product; 14 works on any trio folder; 15 works on any folder). Labs 2, 4–6, 10, and 12 build
+on products you made earlier, and say so at the top; Lab 13 needs a small Python project with
+tests.
 
 ## The toys
 
