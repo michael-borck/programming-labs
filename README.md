@@ -131,6 +131,11 @@ behind this series; *Think Python, Direct AI* for the computational-thinking spi
 language under your fingers; *Ship Python, Orchestrate AI* when Labs 4, 5 and 10 make you
 curious what checks, version control and delivery look like at professional depth.
 
+And when the labs make you wonder what the agent is actually doing in there — what a system
+prompt, a tool call, or retrieval really is — the sibling
+[HandsOnAI](https://github.com/michael-borck/hands-on-ai) toolkit teaches those mechanisms as
+small, readable Python that you run and open yourself. That's the layer these labs steer.
+
 ## This repo eats its own dogfood
 
 Every lab here is itself built spec-first: the series has its own [`DECISIONS.md`](DECISIONS.md),
@@ -142,7 +147,8 @@ critique form we hand you.
 
 Part of [programming.borck.education](https://programming.borck.education), alongside the sibling
 toy collection [Programming Toys](https://programmingtoys.borck.education) and the
-[HandsOnAI](https://handsonai.borck.education) toolkit. The companion books on intentional AI
+[HandsOnAI](https://handsonai.borck.education) toolkit — the see-under-the-hood companion for
+when steering is no longer enough. The companion books on intentional AI
 collaboration live at [books.borck.education](https://books.borck.education).
 
 ## Licence
